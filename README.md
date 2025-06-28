@@ -45,59 +45,6 @@ Este projeto utiliza um microcontrolador (ESP32/Arduino) para ler dados de senso
       * Python: `pyserial` (para comunicação serial) e `pandas` (para manipulação e salvamento dos dados).
 
 -----
-
-## 🚀 Como Executar o Projeto
-
-Siga este passo a passo para colocar o sistema em funcionamento.
-
-### Pré-requisitos
-
-1.  **Arduino IDE:** Tenha o ambiente de desenvolvimento do Arduino instalado.
-2.  **Bibliotecas Arduino:** Instale a biblioteca `LiquidCrystal_I2C` através do Gerenciador de Bibliotecas da IDE.
-3.  **Python 3:** Tenha o Python 3 instalado no computador que rodará o backend.
-4.  **Bibliotecas Python:** Instale as dependências `pyserial` e `pandas` com o seguinte comando no seu terminal:
-    ```bash
-    pip install pyserial pandas
-    ```
-
-### Passo a Passo
-
-#### 1\. Montagem do Hardware
-
-Conecte todos os sensores, relés, displays e atuadores ao seu microcontrolador. As conexões devem seguir os pinos definidos no início do código C++ (`.ino`).
-
-#### 2\. Gravar o Código no Microcontrolador
-
-1.  Abra o arquivo `.ino` do projeto na Arduino IDE.
-2.  Verifique se o tipo de placa (Ex: "ESP32 Dev Module") e a porta COM/Serial correta estão selecionados no menu `Ferramentas`.
-3.  Clique no botão "Carregar" (seta para a direita) para enviar o código ao microcontrolador.
-
-#### 3\. Configurar o Backend Python
-
-1.  Abra o arquivo `backend.py` em um editor de código.
-2.  **Atenção:** Encontre a linha `SERIAL_PORT = 'COM3'` e **altere o valor** para a porta serial à qual seu Arduino está conectado.
-      * **No Windows:** Geralmente `COM3`, `COM4`, etc.
-      * **No Linux:** Geralmente `/dev/ttyUSB0` ou `/dev/ttyACM0`.
-      * **No macOS:** Geralmente `/dev/cu.usbmodemXXXX`.
-3.  Você pode ajustar o intervalo de salvamento alterando a variável `SAVE_INTERVAL_SECONDS`.
-
-#### 4\. Executar o Backend
-
-1.  Com o Arduino já rodando e conectado ao computador via USB, abra um terminal (Prompt de Comando, PowerShell, etc).
-2.  Navegue até a pasta onde o arquivo `backend.py` está salvo.
-3.  Execute o script com o comando:
-    ```bash
-    python backend.py
-    ```
-
-#### 5\. Verificar a Saída
-
-  - O terminal começará a exibir os dados recebidos do Arduino em tempo real.
-  - Na pasta do projeto, um arquivo chamado `dados_tratamento_agua.csv` será criado. Este arquivo será atualizado com os novos dados coletados a cada intervalo definido (padrão de 5 minutos).
-  - Você pode abrir o arquivo `.csv` com Excel, Google Sheets ou outra ferramenta de planilhas para analisar os dados.
-
------
-
 ## 📂 Estrutura do Repositório
 
 ```
