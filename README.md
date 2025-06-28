@@ -130,5 +130,7 @@ Este projeto está sob a licença APACHE 2.0. Veja o arquivo `LICENSE` para mais
 
 ## Feito com🩸e 💦 por:
 **Anthonny Lucas** LinkedIn:
+
 **Gabriel Renan** LinkedIn: https://www.linkedin.com/in/gabrielrenan-computer-eng/ || GitHub: https://github.com/GabrielRenanPE
+
 **Wemerson Carvalho**. LinkeDin:
